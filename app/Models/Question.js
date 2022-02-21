@@ -12,20 +12,22 @@ export class Question {
   get Template() {
     return `          
 
-    <div class="col-6 card bg-dark p-3">
+    <div class="col-lg-12 col-md-12 col-sm-12 card bg-dark p-3">
     <div class="text-center text-light">
       <p class="col-12">
         ${this.question}
       </p>
       <p class="col-12">
-      <ul>
+      <ul class="col-12">
       Options:
         ${this.Options}
         <ul>
       </p>
       
-        <div class="p-2">
-          <span id="showAnswer" style="display: ${this.showAnswer};" class="p-3">${this.correct_answer}</span><button onclick="app.triviaController.showAnswer('${this.id}')">Show Answer</button><form><button>Next Question</button></form>
+        <div class="text-center d-flex justify-content-center row p-2">
+          <span class="col-10 justify-content-center p-1" id="showAnswer" style="display: ${this.showAnswer};" class="p-1">${this.correct_answer}</span>
+          <button class="col-10" onclick="app.triviaController.showAnswer('${this.id}')">Show Answer</button>
+          <form><button class="col-10">Next Question</button></form>
         </div>
     
     </div>
