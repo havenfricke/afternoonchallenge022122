@@ -25,9 +25,13 @@ export class Question {
       </p>
       
         <div class="text-center d-flex justify-content-center row p-2">
-          <span class="col-10 justify-content-center p-1" id="showAnswer" style="display: ${this.showAnswer};" class="p-1">${this.correct_answer}</span>
-          <button class="col-10" onclick="app.triviaController.showAnswer('${this.id}')">Show Answer</button>
-          <form><button class="col-10">Next Question</button></form>
+          <span class="col-12 justify-content-center rounded-pill p-1" id="showAnswer" style="display: ${this.showAnswer};" class="p-1">${this.correct_answer}</span>
+          <div>
+          <button class="col-lg-6 col-md-12 col-sm-12 rounded-pill" onclick="app.triviaController.showAnswer('${this.id}')">Show Answer</button>
+          </div>
+          <div>
+          <form><button class="col-lg-6 col-md-12 col-sm-12 rounded-pill">Next Question</button></form>
+          </div>
         </div>
     
     </div>
